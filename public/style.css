@@ -41,21 +41,15 @@ form {
 
 input[type="text"],
 input[type="password"] {
-    background: #1a2226;
-    border: 2px solid #0db8de;
     border-radius: 10px;
-    margin-bottom: 25px;
-    color: #ffffff;
+    color: #1c1917;
 }
-
+/* 
 input[type="text"]:focus,
 input[type="password"]:focus {
-    outline: none;
-    border: none;
-    background: #1a2226;
-    margin: 0;
-    color: #ffffff;
-}
+    background: #ffffff;
+    color: #1c1917;
+} */
 
 .card-title {
     font-weight: 900;

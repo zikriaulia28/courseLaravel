@@ -14,13 +14,9 @@
     @include('Layout.navbar')
     @yield('content')
 
-    <footer class="absolute bottom-0 left-0 w-full flex flex-col items-center justify-center px-6 py-4 bg-white sm:flex-row">
+    <footer class=" w-full flex flex-col items-center justify-center px-6 py-4 bg-white sm:flex-row">
         <p class=" py-2 text-gray-800  sm:py-0">&copy; Deacourse-Laravel Made With ❤</p>
-        </div>
     </footer>
-    {{-- <footer>
-
-    </footer> --}}
 </body>
 
 </html>

@@ -22,7 +22,7 @@ class UsersController extends Controller
         $users = Users::where('username', $request->username)->first();
 
         if ($users == null) {
-            return redirect()->back()->with('error', 'username tidak ditemukan 🤯');
+            return redirect()->back()->with('error', 'username tidak ditemukan');
         }
 
         $db_password = $users->password;
@@ -34,7 +34,7 @@ class UsersController extends Controller
             $request->session()->put('token', $users->token);
             return to_route('dashboard_index');
         } else {
-            return redirect()->back()->with('error', 'maaf data anda tidak sesuai 😈');
+            return redirect()->back()->with('error', 'maaf data anda tidak sesuai');
         }
     }
 

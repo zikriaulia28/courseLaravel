@@ -10,9 +10,7 @@
                     class="text-gray-800 transition-colors duration-200 transform  border-b-2 border-blue-500 mx-1.5 sm:mx-6">
                     Home
                 </a>
-
             </div>
         </div>
     </div>
-
 </nav>
