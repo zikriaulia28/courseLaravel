@@ -45,7 +45,7 @@
                     class="flex items-center h-12 px-4 max-w-full bg-white mt-2 rounded border border-gray-300  focus:border-sky-300 focus:outline-none focus:ring focus:ring-offset-sky-500"
                     name="password" type="password">
                 <button type="submit"
-                    class="flex items-center justify-center h-12 px-6 w-full bg-blue-600 mt-8 rounded font-semibold text-sm text-blue-100 hover:bg-blue-700">Login</button>
+                    class="flex items-center justify-center h-12 px-6 w-full bg-blue-600 mt-8 rounded font-semibold text-sm text-blue-100 hover:bg-blue-700 focus:outline-none focus:ring-offset-sky-500">Login</button>
                 <div class="flex mt-6 justify-center text-xs">
                     <a class="text-blue-400 hover:text-blue-500" href="register">Sign Up</a>
                 </div>
