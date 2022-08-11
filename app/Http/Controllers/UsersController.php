@@ -20,7 +20,7 @@ class UsersController extends Controller
     public function login_action(Request $request)
     {
         $users = Users::where('username', $request->username)->first();
-        
+
         if ($users == null) {
             return redirect()->back()->with('error', 'username tidak ditemukan 🤯');
         }
@@ -46,12 +46,12 @@ class UsersController extends Controller
     public function register_action(Request $request)
     {
         $request->validate([
-            'username'=> ['required'],
-            'password'=> ['required'],
+            'username' => ['required'],
+            'password' => ['required'],
         ]);
         $users = new Users([
             'username' => $request->username,
-            'password' =>Hash::make($request->password),
+            'password' => Hash::make($request->password),
         ]);
         $users->save();
         return redirect()->route('login_form')->with('success', 'Registrasi Berhasil. Silahkan Login!');
@@ -81,7 +81,7 @@ class UsersController extends Controller
         Session::pull('token');
         return to_route('login_form');
     }
-    
+
     public function article_delete_action(Request $request)
     {
         Articles::find($request->id)->delete();
@@ -97,13 +97,13 @@ class UsersController extends Controller
         ]);
 
         $created = Articles::create([
-            "title" => $request->title,  
-            "description" => $request->description,  
-            "tag" => $request->tag,  
+            "title" => $request->title,
+            "description" => $request->description,
+            "tag" => $request->tag,
         ]);
-        if($created){
+        if ($created) {
             return redirect()->back()->with('message', 'artikel berhasil dibuat');
-        }else{
+        } else {
             return redirect()->back()->with('message', 'artikel gagal dibuat');
         }
     }
@@ -127,20 +127,20 @@ class UsersController extends Controller
             'tag' => ['nullable'],
         ]);
 
-    //     $updated = Articles::where ('id', $id)
-    //     ->update(['title' => $request->title,
-    // 'description' => $request->description,
-    // 'tag' => $request->tag,
-    // ]);
+        //     $updated = Articles::where ('id', $id)
+        //     ->update(['title' => $request->title,
+        // 'description' => $request->description,
+        // 'tag' => $request->tag,
+        // ]);
 
         $updated = Articles::find($id);
-        $updated->title= $request->title;
+        $updated->title = $request->title;
         $updated->description = $request->description;
         $updated->tag = $request->tag;
         $updated->save();
-        if($updated){
+        if ($updated) {
             return to_route('dashboard_index')->with('message', 'artikel berhasil diedit');
-        }else{
+        } else {
             return redirect()->back()->with('message', 'artikel gagal dibuat');
         }
     }

@@ -77,3 +77,17 @@ input[type="password"]:focus {
 footer {
     margin-top: 90px;
 }
+::-webkit-scrollbar {
+    width: 14px;
+}
+::-webkit-scrollbar-track {
+    background: #cbd5e1;
+}
+
+::-webkit-scrollbar-thumb {
+    background:#7dd3fc; 
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #0e7490; 
+}
