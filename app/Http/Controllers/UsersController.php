@@ -102,9 +102,9 @@ class UsersController extends Controller
             "tag" => $request->tag,
         ]);
         if ($created) {
-            return redirect()->back()->with('message', 'artikel berhasil dibuat');
+            return redirect()->back()->with('message', 'Artikel Berhasil Dibuat');
         } else {
-            return redirect()->back()->with('message', 'artikel gagal dibuat');
+            return redirect()->back()->with('message', 'Artikel Gagal Dibuat');
         }
     }
 
@@ -126,12 +126,6 @@ class UsersController extends Controller
             'description' => ['required', 'max:255', 'min:10'],
             'tag' => ['nullable'],
         ]);
-
-        //     $updated = Articles::where ('id', $id)
-        //     ->update(['title' => $request->title,
-        // 'description' => $request->description,
-        // 'tag' => $request->tag,
-        // ]);
 
         $updated = Articles::find($id);
         $updated->title = $request->title;
