@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -21,7 +21,7 @@
         <p class=" py-2 text-gray-800  sm:py-0">&copy; Deacourse-Laravel Made With ❤</p>
         </div>
     </footer>
-    <script src="main.js"></script>
+    <script src="/main.js"></script>
 </body>
 
 </html>

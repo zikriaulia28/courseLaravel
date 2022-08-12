@@ -1,5 +1,4 @@
-const message = document.getElementById("message");
-
+const toast   = document.getElementById('static-example');
 setTimeout(function () {
-    message.classList.toggle("d-none");
+    toast.classList.add("hidden");
 }, 2000);

@@ -123,7 +123,7 @@ class UsersController extends Controller
     {
         $request->validate([
             'title' => ['required'],
-            'description' => ['required', 'max:255', 'min:10'],
+            'description' => ['required', 'min:10'],
             'tag' => ['nullable'],
         ]);
 
@@ -135,6 +135,7 @@ class UsersController extends Controller
         if ($updated) {
             return to_route('dashboard_index')->with('message', 'artikel berhasil diedit');
         } else {
+            dd('salah');
             return redirect()->back()->with('message', 'artikel gagal dibuat');
         }
     }
